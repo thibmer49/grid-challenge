@@ -21,21 +21,26 @@ body {
 
   nav {
     grid-area: 1 / 1 / 2 / 13;
-    border-style: solid;
-    border-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: solid;
   }
 
   .side {
     grid-area: 2 / 1 / 8 / 3;
-    border-style: solid;
+    border-right: solid;
     border-color: black;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease;
+  }
+
+  .side:hover {
+    background-color: aqua;
+    color: white;
   }
 
   .side h1 {
@@ -46,36 +51,52 @@ body {
 
   .bottom {
     grid-area: 8 / 1 / 9 / 9;
-    border-style: solid;
-    border-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: solid;
+    border-right: solid;
   }
 
   .bottom-right{
     grid-area: 8 / 9 / 9 / 13;
-    border-style: solid;
-    border-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: solid;
   }
-
 
   .right {
     grid-area: 2 / 9 / 8 / 13;
-    border-style: solid;
-    border-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-image 0.5s ease;
+    opacity: 0;
+  }
+
+  .right.hovered {
+    background-image: url("https://images.pexels.com/photos/2584278/pexels-photo-2584278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    opacity: 1;
+    box-shadow: none;
+    z-index: 1;
+    transition: none;
   }
 
   .center {
     grid-area: 2 / 3 / 8 / 9;
-    border-style: solid;
+    transition: opacity 0.5s ease, box-shadow 0.5s ease;
+    /* opacity: 0; */
+    border-right: solid;
     border-color: black;
-    background-image: linear-gradient(71deg, rgba(54,171,94,0.8421962535014006) 24%, rgba(95,82,218,0.7693671218487395) 98%), url("https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    transition: background-image 0.5s ease;
+    background-image: url("https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     background-size: cover;
+    transition: 0.3s ease;
+  }
+
+  .center.hovered {
+    background-image: linear-gradient(71deg, rgba(54,171,94,0.8421962535014006) 24%, rgba(95,82,218,0.7693671218487395) 98%), url("https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+
   }
