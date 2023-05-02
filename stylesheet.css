@@ -5,98 +5,55 @@ html {
 }
 
 body {
-  background-color: rgb(241, 225, 189);
-  height: 100vh;
+  background-color: black;
+  height: 100%;
   margin: 0;
+  padding: 0;
+  color: black;
 }
 
 .parent {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
   height: 100%;
   }
 
-  nav {
-    grid-area: 1 / 1 / 2 / 13;
+  .parent > div {
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid;
+    text-align: center;
+  }
+
+  nav {
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  a {
+    text-decoration: none;
+    padding: 5px;
   }
 
   .side {
-    grid-area: 2 / 1 / 8 / 3;
-    border-right: solid;
-    border-color: black;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease;
+    grid-area: 2 / 1 / 5 / 2;
   }
 
-  .side:hover {
-    background-color: aqua;
-    color: white;
-  }
-
-  .side h1 {
+  .side h2 {
     transform: rotate(-90deg);
-    font-size: 70px;
-    white-space: nowrap;
   }
 
-  .bottom {
-    grid-area: 8 / 1 / 9 / 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: solid;
-    border-right: solid;
-  }
-
-  .bottom-right{
-    grid-area: 8 / 9 / 9 / 13;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: solid;
-  }
-
-  .right {
-    grid-area: 2 / 9 / 8 / 13;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-image 0.5s ease;
-    opacity: 0;
-  }
-
-  .right.hovered {
-    background-image: url("https://images.pexels.com/photos/2584278/pexels-photo-2584278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-size: cover;
-    opacity: 1;
-    box-shadow: none;
-    z-index: 1;
-    transition: none;
-  }
-
-  .center {
-    grid-area: 2 / 3 / 8 / 9;
-    transition: opacity 0.5s ease, box-shadow 0.5s ease;
-    /* opacity: 0; */
-    border-right: solid;
-    border-color: black;
-    transition: background-image 0.5s ease;
-    background-image: url("https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-size: cover;
-    transition: 0.3s ease;
-  }
-
-  .center.hovered {
-    background-image: linear-gradient(71deg, rgba(54,171,94,0.8421962535014006) 24%, rgba(95,82,218,0.7693671218487395) 98%), url("https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-
-  }
+  .bottom { grid-area: 2 / 2 / 5 / 4; }
+  .bottom-right { grid-area: 2 / 4 / 5 / 6; }
+  .right { grid-area: 5 / 4 / 6 / 6; }
+  .center { grid-area: 5 / 1 / 6 / 4; }
