@@ -50,12 +50,12 @@ h2 span {
 }
 
 .bg1 {
-  background-color: aqua;
+  background: url("images/bg1.jpeg");
   background-size: cover;
 }
 
 .bg2 {
-  background: url("/Users/thmercier/code/thibmer49/grid-challenge/images/bg1.jpeg");
+  background: url("images/bg2.jpeg");
   color: white;
   background-size: cover;
 }
